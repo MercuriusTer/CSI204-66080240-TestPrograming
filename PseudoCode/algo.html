@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: fit-content;
+            padding-bottom: 1rem;
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Basic Algorithm (ลำดับ - Sequential)</h1>
+        <h2>คำนวณพื้นที่ของวงกลม</h2>
+        <label for="radius">กรอกรัศมีของวงกลม:</label>
+        <input type="number" id="radius" placeholder="ใส่ค่า r">
+        <button onclick="calculateArea()">คำนวณ</button>
+        <p id="result"></p>
+    </div>
+
+    <div>
+        <h1>Conditional Algorithm (เงื่อนไข - If-Else)</h1>
+        <h2>ตรวจสอบอายุ</h2>
+        <label for="age">กรอกอายุของคุณ:</label>
+        <input type="number" id="age" placeholder="ใส่อายุ">
+        <button onclick="checkAge()">ตรวจสอบ</button>
+
+        <h2>ตรวจสอบเลขคู่/คี่</h2>
+        <label for="number">กรอกตัวเลข:</label>
+        <input type="number" id="number" placeholder="ใส่ตัวเลข">
+        <button onclick="checkEvenOdd()">ตรวจสอบ</button>
+    </div>
+
+    <div>
+        <h1>Loop Algorithm (การทำซ้ำ - Looping)</h1>
+
+        <h2>เขียน For Loop เพื่อแสดงเลข 1-10</h2>
+        <button onclick="runForLoop()">แสดงเลข 1-10</button>
+        <p id="forLoopResult"></p>
+
+        <h2>เขียน While Loop เพื่อรับค่าจากผู้ใช้ไปเรื่อย ๆ จนกว่าผู้ใช้จะพิมพ์ "exit"</h2>
+        <button onclick="startWhileLoop()">เริ่มรับค่าจากผู้ใช้</button>
+        <p id="whileLoopResult"></p>
+    </div>
+
+    <div>
+        <h1>Sorting Algorithm (การเรียงลำดับข้อมูล)</h1>
+        <button onclick="generateArray()">สุ่มตัวเลขเพื่อจัดเรียง</button>
+        <p id="arrayResult"></p>
+        <button onclick="sortArray('bubble')">Bubble Sort</button>
+        <button onclick="sortArray('selection')">Selection Sort</button>
+        <p id="sortedArray"></p>
+    </div>
+
+    <div>
+        <h1>Recursive Algorithm (การทำซ้ำแบบเรียกตัวเอง)</h1>
+
+        <h2>Factorial (n!)</h2>
+        <input type="number" id="factorialInput" placeholder="ใส่ค่า n">
+        <button onclick="calculateFactorial()">คำนวณ Factorial</button>
+
+        <h2>Fibonacci Sequence</h2>
+        <input type="number" id="fibonacciInput" placeholder="ใส่ค่า n">
+        <button onclick="calculateFibonacci()">คำนวณ Fibonacci</button>
+    </div>
+
+    <div>
+        <h1>Debugging & Error Handling (การแก้ไขปัญหา)</h1>
+        <h2>ทดสอบกับโปรแกรมหารตัวเลข</h2>
+        <input type="number" id="num1" placeholder="ตัวเลขที่ 1">
+        <input type="number" id="num2" placeholder="ตัวเลขที่ 2">
+        <button onclick="divideNumbers()">➗ หาร</button>
+
+        <p id="resultDivide">ผลลัพธ์: -</p>
+    </div>
+
+    <script src="./basicAlgo.js"></script>
+    <script src="./conditionalAlgo.js"></script>
+    <script src="./loopAlgo.js"></script>
+    <script src="./sortingAlgo.js"></script>
+    <script src="./recursiveAlgo.js"></script>
+    <script src="./debugging.js"></script>
+</body>
+
+</html>

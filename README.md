@@ -23,12 +23,12 @@ Made by Woradech Ardvichai
 
 ## 📌 ฝึกการเขียน Pseudocode และ Algorithm
 
-- [] Basic Algorithm (ลำดับ - Sequential)
-- [] Conditional Algorithm (เงื่อนไข - If-Else)
-- [] Loop Algorithm (การทำซ้ำ - Looping)
-- [] Sorting Algorithm (การเรียงลำดับข้อมูล)
-- [] Recursive Algorithm (การทำซ้ำแบบเรียกตัวเอง)
-- [] Debugging & Error Handling (การแก้ไขปัญหา)
+- [x] Basic Algorithm (ลำดับ - Sequential)
+- [x] Conditional Algorithm (เงื่อนไข - If-Else)
+- [x] Loop Algorithm (การทำซ้ำ - Looping)
+- [x] Sorting Algorithm (การเรียงลำดับข้อมูล)
+- [x] Recursive Algorithm (การทำซ้ำแบบเรียกตัวเอง)
+- [x] Debugging & Error Handling (การแก้ไขปัญหา)
 
 ## 📌 ลำดับ Create Form: Demo-Project เพื่อประยุกต์การฝึกทักษะทางด้านโปรแกรม
 
