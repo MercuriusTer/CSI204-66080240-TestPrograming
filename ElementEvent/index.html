@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <h1>Element and Event: Test Programing</h1>
+    <div>
+        <h2>Change Background Color</h2>
+        <button onclick="changeBGBlue()">Blue</button>
+        <button onclick="changeBGRed()">Red</button>
+        <button onclick="changeBGGreen()">Green</button>
+        <button onclick="changeBGWhite()">White</button>
+    </div>
+
+    <div>
+        <h2>การจัดการ Event ใน JavaScript</h2>
+        <button onclick="showMessage()">กดเพื่อแสดงข้อความ</button>
+        <p id="message"></p>
+
+        <div id="hoverBox" onmouseover="changeColor()" onmouseout="resetColor()">
+            นี่เป็น Div แต่ลองวางเมาส์ดูสิ
+        </div>
+
+        <input type="text" id="textInput" placeholder="พิมพ์อะไรสักอย่าง..." onkeyup="updateText()">
+        <p id="displayText"></p>
+
+        <button id="eventButton">กดเพื่อเปลี่ยนสีพื้นหลัง</button>
+    </div>
+
+    <div>
+        <h2>สร้างแบบฟอร์มรับค่าและตรวจสอบข้อมูล</h2>
+        <form id="registrationForm">
+            <label for="name">ชื่อ:</label>
+            <input type="text" id="name" placeholder="กรอกชื่อของคุณ">
+            <br>
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" placeholder="กรอกอีเมลของคุณ">
+
+            <button class="form-button" type="submit">ลงทะเบียน</button>
+        </form>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
