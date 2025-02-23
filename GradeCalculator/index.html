@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h1>📊 Student Grade Calculator</h1>
+    <div class="container">
+        <h3>กรอกคะแนน (0 - 100)</h3>
+        <table>
+            <tr>
+                <td>CSI101:</td>
+                <td><input type="number" id="csi101" min="0" max="100" oninput="calculateGrade('csi101')"></td>
+                <td class="grade" id="grade101">-</td>
+            </tr>
+            <tr>
+                <td>CSI102:</td>
+                <td><input type="number" id="csi102" min="0" max="100" oninput="calculateGrade('csi102')"></td>
+                <td class="grade" id="grade102">-</td>
+            </tr>
+            <tr>
+                <td>CSI203:</td>
+                <td><input type="number" id="csi203" min="0" max="100" oninput="calculateGrade('csi203')"></td>
+                <td class="grade" id="grade203">-</td>
+            </tr>
+            <tr>
+                <td>CSI204:</td>
+                <td><input type="number" id="csi204" min="0" max="100" oninput="calculateGrade('csi204')"></td>
+                <td class="grade" id="grade204">-</td>
+            </tr>
+            <tr>
+                <td>CSI305:</td>
+                <td><input type="number" id="csi305" min="0" max="100" oninput="calculateGrade('csi305')"></td>
+                <td class="grade" id="grade305">-</td>
+            </tr>
+        </table>
+
+        <button onclick="calculateGPA()">คำนวณ GPA</button>
+
+        <p id="gpa-result">GPA: -</p>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
