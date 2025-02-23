@@ -32,7 +32,7 @@ Made by Woradech Ardvichai
 
 ## 📌 ลำดับ Create Form: Demo-Project เพื่อประยุกต์การฝึกทักษะทางด้านโปรแกรม
 
-- [] To-Do List Web App (ใช JavaScript, HTML, CSS, และ GitHub)
+- [x] To-Do List Web App (ใช้ JavaScript, HTML, CSS, และ GitHub)
 - [] Student Grade Calculator (JavaScript)
-- [] Simple API Data Fetching (ใช JavaScript Fetch API)
+- [] Simple API Data Fetching (ใช้ JavaScript Fetch API)
 - [] ระบบสุ่มเลขหวย (Lottery Generator)
