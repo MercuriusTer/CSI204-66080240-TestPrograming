@@ -4,17 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List App Naja Eiei</title>
+    <title>To-Do List App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             text-align: center;
             padding: 50px;
-        }
-
-        h1 {
-            color: #333;
         }
 
         .todo-container {
@@ -26,7 +22,7 @@
             margin: auto;
         }
 
-        input {
+        input[type="text"] {
             width: 70%;
             padding: 10px;
             margin: 10px 0;
@@ -54,6 +50,7 @@
 
         li {
             display: flex;
+            align-items: center;
             justify-content: space-between;
             background: #fff;
             padding: 10px;
@@ -74,11 +71,15 @@
         .delete:hover {
             background: #c82333;
         }
+
+        .completed {
+            text-decoration: line-through;
+            color: #888;
+        }
     </style>
 </head>
 
 <body>
-
     <h1>To-Do List Web App</h1>
     <div class="todo-container">
         <input type="text" id="taskInput" placeholder="เพิ่มงาน...">
@@ -99,24 +100,38 @@
             }
 
             let taskList = document.getElementById("taskList");
-
             let li = document.createElement("li");
-            li.innerHTML = `${taskText} <button class="delete" onclick="deleteTask(this)">❌</button>`;
+
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.addEventListener("change", saveTasks);
+
+            let span = document.createElement("span");
+            span.textContent = taskText;
+
+            let deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "X";
+            deleteBtn.classList.add("delete");
+            deleteBtn.onclick = function () {
+                li.remove();
+                saveTasks();
+            };
+
+            li.appendChild(checkbox);
+            li.appendChild(span);
+            li.appendChild(deleteBtn);
             taskList.appendChild(li);
 
             saveTasks();
             taskInput.value = "";
         }
 
-        function deleteTask(button) {
-            button.parentElement.remove();
-            saveTasks();
-        }
-
         function saveTasks() {
             let tasks = [];
             document.querySelectorAll("#taskList li").forEach(li => {
-                tasks.push(li.firstChild.textContent);
+                let taskText = li.querySelector("span").textContent;
+                let isCompleted = li.querySelector("input[type='checkbox']").checked;
+                tasks.push({ text: taskText, completed: isCompleted });
             });
             localStorage.setItem("tasks", JSON.stringify(tasks));
         }
@@ -125,15 +140,36 @@
             let savedTasks = JSON.parse(localStorage.getItem("tasks"));
             if (savedTasks) {
                 let taskList = document.getElementById("taskList");
-                savedTasks.forEach(taskText => {
+                savedTasks.forEach(task => {
                     let li = document.createElement("li");
-                    li.innerHTML = `${taskText} <button class="delete" onclick="deleteTask(this)">X</button>`;
+
+                    let checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.checked = task.completed;
+                    checkbox.addEventListener("change", saveTasks);
+
+                    let span = document.createElement("span");
+                    span.textContent = task.text;
+                    if (task.completed) {
+                        span.classList.add("completed");
+                    }
+
+                    let deleteBtn = document.createElement("button");
+                    deleteBtn.textContent = "X";
+                    deleteBtn.classList.add("delete");
+                    deleteBtn.onclick = function () {
+                        li.remove();
+                        saveTasks();
+                    };
+
+                    li.appendChild(checkbox);
+                    li.appendChild(span);
+                    li.appendChild(deleteBtn);
                     taskList.appendChild(li);
                 });
             }
         }
     </script>
-
 </body>
 
 </html>

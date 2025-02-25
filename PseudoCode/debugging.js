@@ -10,7 +10,7 @@ function divideNumbers() {
             throw new Error("กรุณาใส่ตัวเลขที่ถูกต้อง!");
         }
         if (b === 0) {
-            throw new Error("ไม่สามารถหารด้วยศูนย์ได้!");
+             throw new Error("ไม่สามารถหารด้วยศูนย์ได้!");
         }
 
         let result = a / b;

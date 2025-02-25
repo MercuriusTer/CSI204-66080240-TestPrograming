@@ -1,17 +1,17 @@
 // 1. การใช้งาน List (Array)
-let myList = ["A", "B", "C"];
-console.log("รายชื่อนักเรียน:", myList);
+// let myList = ["A", "B", "C"];
+// console.log("รายชื่อนักเรียน:", myList);
 
-myList.push("D"); 
-myList.unshift("E"); 
-console.log("อัพเดตเมื่อเพิ่ม", myList);
+// myList.push("D"); 
+// myList.unshift("E"); 
+// console.log("อัพเดตเมื่อเพิ่ม", myList);
 
-myList.pop(); 
-myList.shift();
-console.log("อัพเดตเมื่อลบ", myList);
+// myList.pop(); 
+// myList.shift();
+// console.log("อัพเดตเมื่อลบ", myList);
 
-myList[1] = "F";
-console.log("อัพเดตเมื่อแก้ไข", myList);
+// myList[1] = "F";
+// console.log("อัพเดตเมื่อแก้ไข", myList);
 
 
 // 2. การใช้งาน Object

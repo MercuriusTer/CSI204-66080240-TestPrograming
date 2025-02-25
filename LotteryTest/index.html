@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .lottery-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ระบบสุ่มเลขหวย</h1>
+    <div class="lottery-container">
+        <button onclick="generateLottery()">สุ่มหวย</button>
+        <p id="lotteryNumber">กดคลิกเพื่อสุ่มหวย</p>
+        <input type="number" id="userGuess" placeholder="กรอกเดาเลขหวย (6 หลัก)" maxlength="6">
+        <button onclick="checkGuess()">เช็คเลขหวย</button>
+        <p class="result" id="result"></p>
+    </div>
+
+    <script>
+        let lotteryNumber = "";
+
+        function generateLottery() {
+            lotteryNumber = Math.floor(100000 + Math.random() * 900000).toString();
+            document.getElementById("lotteryNumber").textContent = `สุ่มเลขเป็นที่เรียบร้อยแล้ว ลองเดาหวยดูสิ`;
+            document.getElementById("result").textContent = "";
+            console.log("เลขหวยในงวดนี้ก็คือ: " + lotteryNumber);
+        }
+
+        function checkGuess() {
+            if (lotteryNumber === "") {
+                alert("กรุณาสุ่มหวยก่อนเช็คเลขหวย");
+                return;
+            }
+
+            let userGuess = document.getElementById("userGuess").value;
+            if (userGuess.length !== 6) {
+                alert("กรุณาใส่ตัวเลขให้ครบ 6 หลัก");
+                return;
+            }
+            let resultText = (userGuess === lotteryNumber) ? "🎉 ยินดีด้วยคุณถูกหวยนะจ๊ะ" : `❌ ขออภัยฉลากของท่านผิดนะจ๊ะ`;
+            document.getElementById("result").textContent = resultText;
+        }
+    </script>
+</body>
+
+</html>
