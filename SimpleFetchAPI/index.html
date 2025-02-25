@@ -22,17 +22,17 @@
                     let userList = document.getElementById("userList");
                     userList.innerHTML = "";
                     // เอาหมด
-                    // users.forEach(user => {
-                    //     let li = document.createElement("li");
-                    //     li.innerHTML = `<strong>${user.name}</strong><br>Email: ${user.email}<br>Address: ${user.address.street}, ${user.address.city}`;
-                    //     userList.appendChild(li);
-                    // });
+                    users.forEach(user => {
+                        let li = document.createElement("li");
+                        li.innerHTML = `<strong>${user.name}</strong><br>Email: ${user.email}<br>Address: ${user.address.street}, ${user.address.city}`;
+                        userList.appendChild(li);
+                    });
 
                     // เอายูเซอร์แค่ 1 คน
-                    let user = users[1];
-                    let li = document.createElement("li");
-                    li.innerHTML = `<strong>${user.name}</strong><br>Email: ${user.email}<br>Address: ${user.address.street}, ${user.address.city}`;
-                    userList.appendChild(li);
+                    // let user = users[1];
+                    // let li = document.createElement("li");
+                    // li.innerHTML = `<strong>${user.name}</strong><br>Email: ${user.email}<br>Address: ${user.address.street}, ${user.address.city}`;
+                    // userList.appendChild(li);
                 })
                 .catch(error => console.error('Error fetching data:', error));
         }
