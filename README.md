@@ -34,5 +34,5 @@ Made by Woradech Ardvichai
 
 - [x] To-Do List Web App (ใช้ JavaScript, HTML, CSS, และ GitHub)
 - [x] Student Grade Calculator (JavaScript)
-- [] Simple API Data Fetching (ใช้ JavaScript Fetch API)
-- [] ระบบสุ่มเลขหวย (Lottery Generator)
+- [x] Simple API Data Fetching (ใช้ JavaScript Fetch API)
+- [x] ระบบสุ่มเลขหวย (Lottery Generator)
